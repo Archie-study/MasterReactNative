@@ -2,3 +2,35 @@ Meeting 1
 DIY
 ID : https://bit.ly/app1_meeting1_diy
 EN : http://tiny.cc/EN_app1_meeting1_diy 
+
+
+Meeting 2 - Styling Your Layout
+ID :
+Challenge 1 : https://bit.ly/app1_meeting2_c1
+Challenge 2 : https://bit.ly/app1_meeting2_c2
+Challenge 3 : https://bit.ly/app1_meeting2_c3
+Challenge 4 : https://bit.ly/app1_meeting2_c4
+DIY         : https://bit.ly/app1_meeting2_diy
+
+EN :
+Challenge 1 : http://tiny.cc/EN_app1_meeting2_c1
+Challenge 2 : http://tiny.cc/EN_app1_meeting2_c2
+Challenge 3 : http://tiny.cc/EN_app1_meeting2_c3
+Challenge 4 : http://tiny.cc/EN_app1_meeting2_c4
+DIY         : http://tiny.cc/EN_app1_meeting2_diy
+
+
+Meeting 3 - Flex Layout and Add Image
+Assets Poketmon : https://bit.ly/app1_meeting3_img
+
+ID : 
+Challenge 1 : https://bit.ly/app1_meeting3_c1
+Challenge 2 : https://bit.ly/app1_meeting3_c2
+Challenge 3 : https://bit.ly/app1_meeting3_c3
+DIY         : https://bit.ly/app1_meeting3_diy
+
+EN : 
+Challenge 1 : http://tiny.cc/EN_app1_meeting3_c1
+Challenge 2 : http://tiny.cc/EN_app1_meeting3_c2
+Challenge 3 : http://tiny.cc/EN_app1_meeting3_c3
+DIY         : http://tiny.cc/EN_app1_meeting3_diy
