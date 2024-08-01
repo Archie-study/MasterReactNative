@@ -9,6 +9,7 @@ const InstagramHomeScreen = () => {
     const username = ['catherine', 'bard', 'tiffany', 'john', 'ellie']
     return (
         <View style={{ flex: 1}}>
+            {/* Instagram Logo and 3 Icons */}
             <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
                 
                 <Text style={{ fontFamily: 'StyleScript-Regular', fontSize:40, marginLeft: 16, color: 'black'}}>
@@ -40,42 +41,48 @@ const InstagramHomeScreen = () => {
                     </View>
                 </View>
             </View>
-            <ScrollView horizontal={true}>
-                <ShowStory 
-                    profile={require('../../assets/images/profilePicture1.png')}
-                    username={username[0]}
-                />
-                <ShowStory 
-                    profile={require('../../assets/images/profilePicture2.png')}
-                    username={username[1]}
-                />
-                <ShowStory 
-                    profile={require('../../assets/images/profilePicture3.png')}
-                    username={username[2]}
-                />
-                <ShowStory 
-                    profile={require('../../assets/images/profilePicture4.png')}
-                    username={username[3]}
-                />
-                <ShowStory 
-                    profile={require('../../assets/images/profilePicture5.png')}
-                    username={username[4]}
-                />
+
+ 
+            
+            {/* Instagram Post */}
+            <ScrollView showsVerticalScrollIndicator={false}>
+                           {/* Instagram Story */}
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                    <ShowStory 
+                        profile={require('../../assets/images/profilePicture1.png')}
+                        username={username[0]}
+                    />
+                    <ShowStory 
+                        profile={require('../../assets/images/profilePicture2.png')}
+                        username={username[1]}
+                    />
+                    <ShowStory 
+                        profile={require('../../assets/images/profilePicture3.png')}
+                        username={username[2]}
+                    />
+                    <ShowStory 
+                        profile={require('../../assets/images/profilePicture4.png')}
+                        username={username[3]}
+                    />
+                    <ShowStory 
+                        profile={require('../../assets/images/profilePicture5.png')}
+                        username={username[4]}
+                    />
 
 
-                {/* <View style={{marginBottom: 50, flexDirection: 'row', }}>
-                    <View style={{marginLeft: 5, marginRight: 5,}}>
-                        <Image style={{width: 80, height:80, borderRadius: 100}} source={require('../../assets/images/profilePicture1.png')} />
-                        <View style={{alignItems:'center'}}>
-                            <Text style={{color: 'black', fontSize: 12, marginTop: 5}}>catherine</Text>
+                    {/* <View style={{marginBottom: 50, flexDirection: 'row', }}>
+                        <View style={{marginLeft: 5, marginRight: 5,}}>
+                            <Image style={{width: 80, height:80, borderRadius: 100}} source={require('../../assets/images/profilePicture1.png')} />
+                            <View style={{alignItems:'center'}}>
+                                <Text style={{color: 'black', fontSize: 12, marginTop: 5}}>catherine</Text>
+                            </View>
                         </View>
-                    </View>
-                </View> */}
-            </ScrollView>
-            <View style={{borderBottomWidth: 1, borderColor: '#E9E4E4'}} />
+                    </View> */}
+                </ScrollView>
+                <View style={{borderBottomWidth: 1, borderColor: '#E9E4E4'}} />
 
 
-            <ScrollView>
+
                 <Feed 
                     profile={require('../../assets/images/profilePicture1.png')}
                     username={username[0]}

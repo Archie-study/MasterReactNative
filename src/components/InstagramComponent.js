@@ -85,7 +85,7 @@ export const ShowStory = (props) => {
     const { profile, username } = props;
     
     return (
-        <View style={{marginBottom: 50, flexDirection: 'row', }}>
+        <View style={{marginBottom: 25, flexDirection: 'row', }}>
             <View style={{marginLeft: 5, marginRight: 5}}>
                 <Image style={{width: 80, height:80, borderRadius: 100}} source={profile} />
                 <View style={{alignItems:'center'}}>
