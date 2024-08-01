@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, ScrollView } from 'react-native'
 
 const ThirdScreen = () => {
     return (
@@ -30,6 +30,7 @@ const ThirdScreen = () => {
 
 const AddImage = () => {
     return (
+        <ScrollView>
         <View style={{alignItems: 'center'}}>
             
             {/* Pikachu */}
@@ -110,6 +111,7 @@ const AddImage = () => {
 
 
         </View>
+        </ScrollView>
     )
 }
 
