@@ -3,7 +3,7 @@ DIY
 ID : https://bit.ly/app1_meeting1_diy
 EN : http://tiny.cc/EN_app1_meeting1_diy 
 
-
+============================================
 Meeting 2 - Styling Your Layout
 ID :
 Challenge 1 : https://bit.ly/app1_meeting2_c1
@@ -19,9 +19,12 @@ Challenge 3 : http://tiny.cc/EN_app1_meeting2_c3
 Challenge 4 : http://tiny.cc/EN_app1_meeting2_c4
 DIY         : http://tiny.cc/EN_app1_meeting2_diy
 
-
+============================================
 Meeting 3 - Flex Layout and Add Image
 Assets Poketmon : https://bit.ly/app1_meeting3_img
+Online Asset 
+- Psyduck : https://id.portal-pokemon.com/play/resources/pokedex/img/pm/0783062d0d860b8ae7d8e859241a700359c4d981.png
+- Bulbasaur : https://id.portal-pokemon.com/play/resources/pokedex/img/pm/cf47f9fac4ed3037ff2a8ea83204e32aff8fb5f3.png
 
 ID : 
 Challenge 1 : https://bit.ly/app1_meeting3_c1
@@ -34,3 +37,16 @@ Challenge 1 : http://tiny.cc/EN_app1_meeting3_c1
 Challenge 2 : http://tiny.cc/EN_app1_meeting3_c2
 Challenge 3 : http://tiny.cc/EN_app1_meeting3_c3
 DIY         : http://tiny.cc/EN_app1_meeting3_diy
+
+============================================
+Meeting 4 - Props and Reusable Component
+
+ID :
+https://bit.ly/app1-meeting4-c1
+https://bit.ly/app1_meeting4_c2
+https://bit.ly/app1_meeting4_diy
+
+EN :
+http://tiny.cc/EN_app1_meeting4_c1
+http://tiny.cc/EN_app1_meeting4_c2
+http://tiny.cc/EN_app1_meeting4_diy

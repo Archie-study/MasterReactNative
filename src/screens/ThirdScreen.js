@@ -350,7 +350,7 @@ const ChallengeScreenM3 = () => {
                                 borderColor: 'green',
                                 backgroundColor: 'aliceblue'
                             }} 
-                            source={{uri: 'https://img.pokemondb.net/artwork/large/bulbasaur.jpg'}}
+                            source={{uri: 'https://id.portal-pokemon.com/play/resources/pokedex/img/pm/cf47f9fac4ed3037ff2a8ea83204e32aff8fb5f3.png'}}
                         />
                         <View style={{marginLeft: 10, justifyContent:'center'}}>
                             <Text>
