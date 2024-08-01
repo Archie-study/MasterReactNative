@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, ImageBackground } from 'react-native'
+import { View, Text, ImageBackground, TextInput } from 'react-native'
 
 const FourthScreen = () => {
     return (
@@ -11,7 +11,7 @@ const FourthScreen = () => {
                     justifyContent: 'flex-end',
                     alignItems: 'flex-start'
                 }}
-                imageStyle={{ borderRadius: 10}}
+                imageStyle={{ borderRadius: 10, opacity: 0.5}}
                 source={{ uri: 'https://wallpaperaccess.com/full/250180.jpg'}}
             >
                 <Text 
@@ -26,6 +26,22 @@ const FourthScreen = () => {
                     Disneyland
                 </Text>
             </ImageBackground>
+
+            <Text style={{ marginTop:12, marginBottom: 12}}>
+                Description
+            </Text>
+
+            <TextInput 
+                style={{
+                    padding:10,
+                    borderWidth: 1,
+                    height: 40,
+                    fontSize: 16
+                }}
+                placeholder="About the place"
+                multiline={true}
+                keyboardType="default"
+            />
         </View>
     )
 }
