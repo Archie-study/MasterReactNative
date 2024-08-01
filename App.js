@@ -4,15 +4,16 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 // import ChallengeScreenM1 from "./src/screens/FirstScreen";
 // import SecondScreen from "./src/screens/SecondScreen";
 // import ChallengeScreenM2 from "./src/screens/SecondScreen";
-import ThirdScreen from "./src/screens/ThirdScreen";
-import AddImage from "./src/screens/ThirdScreen";
-import HorizontalImage from "./src/screens/ThirdScreen";
+// import ThirdScreen from "./src/screens/ThirdScreen";
+// import AddImage from "./src/screens/ThirdScreen";
+// import HorizontalImage from "./src/screens/ThirdScreen";
+import ChallengeScreenM3 from "./src/screens/ThirdScreen";
 
 
 const App = () => {
   return (
     <SafeAreaProvider>
-      <HorizontalImage />
+      <ChallengeScreenM3 />
     </SafeAreaProvider>
   )
 }

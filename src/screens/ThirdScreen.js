@@ -203,4 +203,189 @@ const HorizontalImage = () => {
     )
 }
 
-export default HorizontalImage;
+
+const ChallengeScreenM3 = () => {
+    return (
+        <View>
+            <View style={{alignItems:'center', margin:8}}>
+                <Text style={{fontSize: 24, fontWeight: 'bold'}}>Pokemon's Profile</Text>
+            </View>
+
+            <ScrollView>
+
+                {/* Pikachu */}
+                <View style={{margin:8, padding:8, flexDirection:'row'}}>
+
+                    <ScrollView horizontal={true}>
+                        <Image 
+                            style={{
+                                width: 150,
+                                height: 150,
+                                borderRadius: 20,
+                                borderWidth: 1,
+                                borderColor: 'green',
+                                backgroundColor: 'aliceblue'
+                            }} 
+                            source={require('../../assets/images/pikachu.png')}
+                        />
+                        <View style={{marginLeft: 10, justifyContent:'center'}}>
+                            <Text>
+                                Name: Pikachu
+                                {`\n`}
+                                Category: Mouse
+                                {`\n`}
+                                Abilities: Static
+                                {`\n`}
+                                Weaknesses: Ground
+                            </Text>
+                        </View>
+                    </ScrollView>
+                </View>
+
+
+
+                {/* Flareon */}
+                <View style={{margin:8, padding:8, flexDirection:'row'}}>
+
+                    <ScrollView horizontal={true}>
+                        <Image 
+                            style={{
+                                width: 150,
+                                height: 150,
+                                borderRadius: 20,
+                                borderWidth: 1,
+                                borderColor: 'green',
+                                backgroundColor: 'aliceblue'
+                            }} 
+                            source={require('../../assets/images/flareon.png')}
+                        />
+                        <View style={{marginLeft: 10, justifyContent:'center'}}>
+                            <Text>
+                                Name: Flareon
+                                {`\n`}
+                                Category: Flame
+                                {`\n`}
+                                Abilities: Flash Fire
+                                {`\n`}
+                                Weaknesses: Water, Ground, Rock
+                            </Text>
+                        </View>
+                    </ScrollView>
+                </View>
+
+
+
+                {/* Rapidash */}
+                <View style={{margin:8, padding:8, flexDirection:'row'}}>
+
+                    <ScrollView horizontal={true}>
+                        <Image 
+                            style={{
+                                width: 150,
+                                height: 150,
+                                borderRadius: 20,
+                                borderWidth: 1,
+                                borderColor: 'green',
+                                backgroundColor: 'aliceblue'
+                            }} 
+                            source={require('../../assets/images/rapidash.png')}
+                        />
+                        <View style={{marginLeft: 10, justifyContent:'center'}}>
+                            <Text>
+                                Name: Rapidash
+                                {`\n`}
+                                Category: Fire Horse
+                                {`\n`}
+                                Abilities: Run Away, Flash Fire
+                                {`\n`}
+                                Weaknesses: Water, Ground, Rock
+                            </Text>
+                        </View>
+                    </ScrollView>
+                </View>
+
+
+
+
+                {/* Psyduck */}
+                <View style={{margin:8, padding:8, flexDirection:'row'}}>
+
+                    <ScrollView horizontal={true}>
+                        <Image 
+                            style={{
+                                width: 150,
+                                height: 150,
+                                borderRadius: 20,
+                                borderWidth: 1,
+                                borderColor: 'green',
+                                backgroundColor: 'aliceblue'
+                            }} 
+                            source={{uri: 'https://id.portal-pokemon.com/play/resources/pokedex/img/pm/0783062d0d860b8ae7d8e859241a700359c4d981.png'}}
+                        />
+                        <View style={{marginLeft: 10, justifyContent:'center'}}>
+                            <Text>
+                                Name: Psyduck
+                                {`\n`}
+                                Category: Duck
+                                {`\n`}
+                                Abilities: Dump, Cloud Nine
+                                {`\n`}
+                                Weaknesses: Grass, Electric
+                            </Text>
+                        </View>
+                    </ScrollView>
+                </View>
+
+
+                {/* Bulbasaur */}
+                <View style={{marginBottom: 50, marginLeft:8, marginRight: 8, marginTop:8, padding:8, flexDirection:'row'}}>
+
+                    <ScrollView horizontal={true}>
+                        <Image 
+                            style={{
+                                width: 150,
+                                height: 150,
+                                borderRadius: 20,
+                                borderWidth: 1,
+                                borderColor: 'green',
+                                backgroundColor: 'aliceblue'
+                            }} 
+                            source={{uri: 'https://img.pokemondb.net/artwork/large/bulbasaur.jpg'}}
+                        />
+                        <View style={{marginLeft: 10, justifyContent:'center'}}>
+                            <Text>
+                                Name: Bulbasaur
+                                {`\n`}
+                                Category: Seed
+                                {`\n`}
+                                Abilities: Overgrow
+                                {`\n`}
+                                Weaknesses: Fire, Psychic, Flying, Ice
+                            </Text>
+                        </View>
+                    </ScrollView>
+                </View>
+
+
+                            
+
+
+
+
+
+
+                
+                
+
+
+                
+
+
+
+
+            </ScrollView>
+        </View>
+    )
+}
+
+export default ChallengeScreenM3;
