@@ -31,7 +31,7 @@ const FourthScreen = () => {
 
 
                 {/* DESCRIPTION */}
-                <Text style={{ marginTop:12, marginBottom: 12}}>
+                {/* <Text style={{ marginTop:12, marginBottom: 12}}>
                     Description
                 </Text>
 
@@ -45,12 +45,19 @@ const FourthScreen = () => {
                     placeholder="About the place"
                     multiline={true}
                     keyboardType="default"
+                /> */}
+                <InputComponent 
+                    title="Description"
+                    height={140}
+                    placeholder="About The Place"
+                    multiline={true}
+                    keyboardType="default"
                 />
 
 
 
                 {/* PHONE NUMBER */}
-                <Text style={{ marginTop:12, marginBottom: 12}}>
+                {/* <Text style={{ marginTop:12, marginBottom: 12}}>
                     Phone Number
                 </Text>
 
@@ -61,6 +68,13 @@ const FourthScreen = () => {
                         height: 40,
                         fontSize: 16
                     }}
+                    placeholder="Phone Number"
+                    multiline={true}
+                    keyboardType="phone-pad"
+                /> */}
+                <InputComponent 
+                    title="Phone Number"
+                    height={40}
                     placeholder="Phone Number"
                     multiline={true}
                     keyboardType="phone-pad"
