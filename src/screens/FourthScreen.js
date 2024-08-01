@@ -13,9 +13,18 @@ const FourthScreen = () => {
                 }}
                 imageStyle={{ borderRadius: 10}}
                 source={{ uri: 'https://wallpaperaccess.com/full/250180.jpg'}}
-            
             >
-
+                <Text 
+                    style={{
+                        backgroundColor:'mistyrose',
+                        padding: 8,
+                        margin: 8,
+                        fontSize: 18,
+                        fontWeight: 'bold'
+                    }}
+                >
+                    Disneyland
+                </Text>
             </ImageBackground>
         </View>
     )
