@@ -1,7 +1,15 @@
 import React from "react";
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 
 const SecondScreen = () => {
+    const openAlert = (game) => {
+        if(game === 'mobileLegends'){
+            alert('You choose Mobile Legends!')
+        } else if(game === 'pubg'){
+            alert('You choose PUBG!')
+        }
+    };
+
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'lavender'}}>
             
@@ -38,6 +46,22 @@ const SecondScreen = () => {
                 <Text style={{textAlign: 'center', color: 'black'}}>
                     <Text style={{fontWeight: 'bold'}}>Mobile Legends</Text> is a multiplayer online battle arena (MOBA) game. The <Text style={{color: 'red'}}>two opposing teams fight</Text> to reach and destroy the enemy's base while defending their own base for control of a path
                 </Text>
+            </View>
+            <View>
+                <TouchableOpacity 
+                    style={{
+                        backgroundColor: 'white',
+                        padding: 8,
+                        margin: 8,
+                        borderRadius: 50,
+                        borderWidth: 2
+                    }}
+                    onPress={ () => openAlert('mobileLegends')}
+                >
+                    <Text style={{color:'lightcoral'}}>
+                        Mobile Legends Button
+                    </Text>
+                </TouchableOpacity>
             </View>
 
             <View>
@@ -79,6 +103,22 @@ const SecondScreen = () => {
                 <Text style={{textAlign: 'center', color: 'black'}}>
                     <Text style={{fontWeight:'bold'}}>Player Unknown's Battle Grounds,</Text> better known as PUBG, is a multiplayer battle royale game in which <Text style={{color: 'green'}}>players drop onto an island</Text> and <Text style={{color:'blue'}}>fight to be the last one left standing.</Text>
                 </Text>
+            </View>
+            <View>
+                <TouchableOpacity 
+                    style={{
+                        backgroundColor: 'white',
+                        padding: 8,
+                        margin: 8,
+                        borderRadius: 50,
+                        borderWidth: 2
+                    }}
+                    onPress={ () => openAlert('pubg')}
+                >
+                    <Text style={{color:'lightcoral'}}>
+                        PUBG Button
+                    </Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
