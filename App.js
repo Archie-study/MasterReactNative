@@ -7,14 +7,15 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 // import ThirdScreen from "./src/screens/ThirdScreen";
 // import AddImage from "./src/screens/ThirdScreen";
 // import HorizontalImage from "./src/screens/ThirdScreen";
-import ChallengeScreenM3 from "./src/screens/ThirdScreen";
+// import ChallengeScreenM3 from "./src/screens/ThirdScreen";
 // import FourthScreen from "./src/screens/FourthScreen";
 // import ChallengeScreenM4 from "./src/screens/FourthScreen";
+import InstagramHomeScreen from "./src/screens/InstagramHomeScreen";
 
 const App = () => {
   return (
     <SafeAreaProvider>
-      <ChallengeScreenM3 />
+      <InstagramHomeScreen />
     </SafeAreaProvider>
   )
 }
