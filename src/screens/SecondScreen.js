@@ -124,4 +124,97 @@ const SecondScreen = () => {
     )
 }
 
-export default SecondScreen
+const ChallengeScreenM2 = () => {
+    const showAlert = (system) => {
+        if(system === 'ios'){
+            alert('You choose iOS')
+        } else if(system === 'android'){
+            alert('You choose Android!')
+        }
+    };
+    return (
+        <View style={{
+            flex: 1, justifyContent: 'center', alignItems: 'center'
+        }}>
+
+            {/* iOS */}
+            <View style={{marginBottom: 10}}>
+                <Text style={{color: 'blue', textDecorationLine: 'underline' , fontWeight: 'bold', fontSize: 20}}>iOS</Text>
+            </View>
+            <View style={{
+                backgroundColor:'bisque',
+                marginLeft: 15,
+                marginRight: 15,
+                borderWidth: 1,
+                borderStyle: "dashed",
+                borderRadius: 20,
+                padding: 10,
+                marginBottom: 15
+            }}>
+                <Text style={{textAlign: 'justify', color:'black'}}>
+                    <Text style={{fontWeight:'bold'}}>iOS</Text> (formerly iPhone OS) is a mobile operating system created and developed by <Text style={{fontStyle: "italic", fontWeight:"bold", color: "magenta"}}>Apple Inc.</Text> exclusively for its hardware. It is the operating system that powers many of the company’s mobile devices, including the iPhone and iPod Touch.
+                </Text>
+            </View>
+            <View>
+                <TouchableOpacity 
+                    style={{
+                        backgroundColor: 'white',
+                        padding: 8,
+                        margin: 8,
+                        borderRadius: 50,
+                        borderWidth: 2
+                    }}
+                    onPress={ () => showAlert('ios')}
+                >
+                    <Text style={{color:'lightcoral'}}>
+                        iOS Button
+                    </Text>
+                </TouchableOpacity>
+            </View>
+
+
+            <View>
+                <Text style={{ fontSize: 24,fontWeight: 'bold', color: 'black'}}>VS.</Text>
+            </View>
+
+
+            {/* Android */}
+            <View style={{marginBottom: 10, marginTop: 15}}>
+                <Text style={{color: 'green', textTransform: 'uppercase' , textDecorationLine: 'underline' , fontWeight: 'bold', fontSize: 20}}>Android</Text>
+            </View>
+            <View style={{
+                backgroundColor:'#FFDAB9',
+                marginLeft: 15,
+                marginRight: 15,
+                borderWidth: 1,
+                borderStyle: "dashed",
+                borderRadius: 20,
+                padding: 10,
+                marginBottom: 15
+            }}>
+                <Text style={{color: 'black', textAlign: 'justify'}}>
+                    <Text style={{fontWeight: 'bold'}}>Android</Text> is a mobile operating system based on a modified version of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as smartphones and tablets. Android is developed by a consortium of developers known as the <Text style={{fontWeight: 'bold', fontStyle: 'italic', color: 'purple'}}>Open Handset Alliance</Text> and commercially sponsored by <Text style={{fontWeight: 'bold', fontStyle: 'italic', color: 'blue'}}>Google.</Text>
+                </Text>
+            </View>
+            <View>
+                <TouchableOpacity 
+                    style={{
+                        backgroundColor: 'white',
+                        padding: 8,
+                        margin: 8,
+                        borderRadius: 50,
+                        borderWidth: 2
+                    }}
+                    onPress={ () => showAlert('android')}
+                >
+                    <Text style={{color:'lightcoral'}}>
+                        Android Button
+                    </Text>
+                </TouchableOpacity>
+            </View>
+
+        </View>
+    )
+}
+
+export default ChallengeScreenM2
