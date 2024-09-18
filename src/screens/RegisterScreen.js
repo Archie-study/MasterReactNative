@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { 
     View, 
     Text,
@@ -9,16 +9,28 @@ import {
 } from 'react-native'
 import { Button } from '../components/ButtonComponent'
 import { Input } from '../components/InputComponent'
+import { createProfile } from '../../store/actions/profileAction'
+import { create } from 'react-test-renderer'
+
 
 
 const RegisterScreen = (props) => {
     const { navigation } = props;
+    const dispatch = useDispatch();
 
     const globalProfileData = useSelector(store => store.profileReducer);
 
     useEffect(() => {
         console.log(globalProfileData);
     }, [globalProfileData]);
+
+    useEffect(() => {
+        dispatch(createProfile({
+            username: 'archiemedes',
+            email: 'archiemedes@mail.com',
+            password: 'windows1234'
+        }))
+    }, []);
         
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
