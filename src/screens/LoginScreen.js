@@ -12,7 +12,8 @@ import { Input } from '../components/InputComponent'
 import { scrollTo } from 'react-native-reanimated'
 
 
-const LoginScreen = () => {
+const LoginScreen = (props) => {
+    const { navigation } = props;
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
         <View style={styles.mainContainer}>
@@ -41,7 +42,7 @@ const LoginScreen = () => {
                 <Text style={styles.text}>
                     Don't have an account?
                 </Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                     <Text style={styles.registerText}>
                         Register
                     </Text>
@@ -84,7 +85,8 @@ const styles = StyleSheet.create({
     },
     registerText: {
         color: '#1A5B0A',
-        fontSize: 16
+        fontSize: 16,
+        fontWeight: 'bold'
     }
 })
 
