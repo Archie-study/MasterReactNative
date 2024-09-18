@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { 
     View, 
     Text,
@@ -9,8 +10,15 @@ import {
 import { Button } from '../components/ButtonComponent'
 import { Input } from '../components/InputComponent'
 
+
 const RegisterScreen = (props) => {
     const { navigation } = props;
+
+    const globalProfileData = useSelector(store => store.profileReducer);
+
+    useEffect(() => {
+        console.log(globalProfileData);
+    }, [globalProfileData]);
         
     return (
         <ScrollView contentContainerStyle={styles.scroll}>

@@ -1,0 +1,2 @@
+useSelector() is used to access the value of global state, while
+useDispatch() is used to update the value of global state !
