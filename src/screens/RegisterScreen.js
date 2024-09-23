@@ -24,7 +24,18 @@ const RegisterScreen = (props) => {
         password: ''
     })
 
+    const [isEmailFormat, setIsEmailFormat] = useState(true);
+
     const onChangeInput = (inputType, value) => {
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+        if(inputType === 'email'){
+            if(!emailRegex.test(value)){
+                setIsEmailFormat(false)
+            } else {
+                setIsEmailFormat(true);
+            };
+        };
+
         setForm({
             ...form,
             [inputType]: value
@@ -32,7 +43,7 @@ const RegisterScreen = (props) => {
     };
 
     const sendData = () => {
-        if(form.username === '' || form.email === '' || form.password === ''){
+        if(form.username === '' || form.email === '' || form.password === '' || !isEmailFormat){
             alert('Make sure you fill all the field with the right information')
         } else {
             dispatch(createProfile(form));
@@ -52,6 +63,12 @@ const RegisterScreen = (props) => {
         console.log('email: ' + form.email);
         console.log('password: ' + form.password);
     }, [form]);
+
+    useEffect(() => {
+        if(form.email === ''){
+            setIsEmailFormat(true);
+        }
+    }, [form.email]);
 
 
 
@@ -81,6 +98,17 @@ const RegisterScreen = (props) => {
                             (text) => onChangeInput('email', text)
                         }
                     />
+                    {
+                        isEmailFormat ? 
+                            null 
+                            :
+                            <View style={styles.warningContainer}>
+                                <Text style={styles.warning}>
+                                    Please input the right email format!
+                                </Text>
+                            </View> 
+
+                    }
                     <Input 
                         title="Password"
                         placeholder="Password"
@@ -130,6 +158,13 @@ const styles = StyleSheet.create({
         color: '#1A5B0A',
         fontSize: 16,
         fontWeight: 'bold'
+    },
+    warningContainer: {
+        marginBottom: 16,
+        marginLeft: 16
+    },
+    warning: {
+        color: 'red'
     }
 })
 
