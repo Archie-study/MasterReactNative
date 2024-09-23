@@ -5,7 +5,8 @@ import {
     Text,
     ScrollView,
     StyleSheet,
-    TouchableOpacity
+    TouchableOpacity,
+    Alert
 } from 'react-native'
 import { Button } from '../components/ButtonComponent'
 import { Input } from '../components/InputComponent'
@@ -46,7 +47,17 @@ const RegisterScreen = (props) => {
         if(form.username === '' || form.email === '' || form.password === '' || !isEmailFormat){
             alert('Make sure you fill all the field with the right information')
         } else {
-            dispatch(createProfile(form));
+            dispatch(createProfile(form))
+            Alert.alert(
+                "Success",
+                "Seuccessfully create an account!",
+                [
+                    {
+                        text: "OK",
+                        onPress: () => navigation.navigate('Login')
+                    }
+                ]
+            )
         }
     };
 
