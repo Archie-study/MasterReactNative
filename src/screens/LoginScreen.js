@@ -14,6 +14,10 @@ import { scrollTo } from 'react-native-reanimated'
 
 const LoginScreen = (props) => {
     const { navigation } = props;
+
+    const [score, setScore] = useState(30)
+
+
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
         <View style={styles.mainContainer}>

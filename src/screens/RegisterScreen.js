@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { 
     View, 
@@ -18,19 +18,50 @@ const RegisterScreen = (props) => {
     const { navigation } = props;
     const dispatch = useDispatch();
 
+    const [ form, setForm ] = useState({
+        username: '',
+        email: '',
+        password: ''
+    })
+
+    const onChangeInput = (inputType, value) => {
+        setForm({
+            ...form,
+            [inputType]: value
+        });
+    };
+
+    const sendData = () => {
+        if(form.username === '' || form.email === '' || form.password === ''){
+            alert('Make sure you fill all the field with the right information')
+        } else {
+            dispatch(createProfile(form));
+        }
+    };
+
     const globalProfileData = useSelector(store => store.profileReducer);
 
     useEffect(() => {
+        console.log('GLOBAL STATE ON REGISTER PAGE')
         console.log(globalProfileData);
     }, [globalProfileData]);
 
     useEffect(() => {
-        dispatch(createProfile({
-            username: 'archiemedes',
-            email: 'archiemedes@mail.com',
-            password: 'windows1234'
-        }))
-    }, []);
+        console.log('LOCAL STATE');
+        console.log('username: ' + form.username);
+        console.log('email: ' + form.email);
+        console.log('password: ' + form.password);
+    }, [form]);
+
+
+
+    // useEffect(() => {
+    //     dispatch(createProfile({
+    //         username: 'archiemedes',
+    //         email: 'archiemedes@mail.com',
+    //         password: 'windows1234'
+    //     }))
+    // }, []);
         
     return (
         <ScrollView contentContainerStyle={styles.scroll}>
@@ -39,17 +70,29 @@ const RegisterScreen = (props) => {
                     <Input 
                         title="Username"
                         placeholder="Username"
+                        onChangeText = {
+                            (text) => onChangeInput('username', text)
+                        }
                     />
                     <Input 
                         title="Email"
                         placeholder="Email"
+                        onChangeText = {
+                            (text) => onChangeInput('email', text)
+                        }
                     />
                     <Input 
                         title="Password"
                         placeholder="Password"
+                        onChangeText = {
+                            (text) => onChangeInput('password', text)
+                        }
                     />
                 </View>
-                <Button text="Register"/>
+                <Button 
+                    text="Register"
+                    onPress={() => sendData()}
+                />
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>
                         Already have an account? 
