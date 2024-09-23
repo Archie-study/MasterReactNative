@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { 
     View, 
     Text,
@@ -16,6 +16,8 @@ const LoginScreen = (props) => {
     const { navigation } = props;
 
     const [score, setScore] = useState(30)
+
+    const [ isPassVisible, setIsPassVisible ] = useState(false);
 
 
   return (
@@ -37,6 +39,10 @@ const LoginScreen = (props) => {
                 <Input 
                     title="Password"
                     placeholder="Password"
+                    isPassword={true}
+                    secureTextEntry={isPassVisible ? false : true }
+                    iconName={isPassVisible ? 'eye-off' : 'eye'}
+                    onPress={() => setIsPassVisible(!isPassVisible)}
                 />
             </View>
             <Button 
