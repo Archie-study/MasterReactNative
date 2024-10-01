@@ -39,7 +39,8 @@ const LoginScreen = (props) => {
                     (password.toLowerCase() === globalProfileData.password.toLowerCase())
                 )
         {
-            alert('Login Successful!')
+            // alert('Login Successful!')
+            navigation.navigate('Home')
         }
         else {
             alert(`Your username and password didn't match!`)
