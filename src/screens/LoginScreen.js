@@ -11,6 +11,9 @@ import { Button } from '../components/ButtonComponent'
 import { Input } from '../components/InputComponent'
 import { useSelector } from 'react-redux'
 
+import { useDispatch } from 'react-redux'
+import { loginUser } from '../../store/actions/profileAction'
+
 
 
 
@@ -28,6 +31,8 @@ const LoginScreen = (props) => {
 
     const [ username, setUsername ] = useState('');
     const [ password , setPassword ] = useState('');
+    
+    const dispatch = useDispatch();
 
     const checkData = () => {
         if(username === '' || password === ''){
@@ -41,6 +46,7 @@ const LoginScreen = (props) => {
         {
             // alert('Login Successful!')
             navigation.navigate('Start')
+            dispatch(loginUser(true))
         }
         else {
             alert(`Your username and password didn't match!`)
