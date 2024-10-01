@@ -45,7 +45,7 @@ const LoginScreen = (props) => {
                 )
         {
             // alert('Login Successful!')
-            navigation.navigate('Start')
+            // navigation.navigate('Start')
             dispatch(loginUser(true))
         }
         else {
