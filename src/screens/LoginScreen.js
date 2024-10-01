@@ -40,7 +40,7 @@ const LoginScreen = (props) => {
                 )
         {
             // alert('Login Successful!')
-            navigation.navigate('Home')
+            navigation.navigate('Start')
         }
         else {
             alert(`Your username and password didn't match!`)

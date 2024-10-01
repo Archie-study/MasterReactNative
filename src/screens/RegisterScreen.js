@@ -11,7 +11,7 @@ import {
 import { Button } from '../components/ButtonComponent'
 import { Input } from '../components/InputComponent'
 import { createProfile } from '../../store/actions/profileAction'
-import { create } from 'react-test-renderer'
+// import { create } from 'react-test-renderer'
 
 
 
@@ -51,7 +51,7 @@ const RegisterScreen = (props) => {
             dispatch(createProfile(form))
             Alert.alert(
                 "Success",
-                "Seuccessfully create an account!",
+                "Successfully create an account!",
                 [
                     {
                         text: "OK",

@@ -34,8 +34,8 @@ export const Input = (props) => {
                 {
                     isPassword ? 
                         <View style={styles.iconContainer}>
-                            {/* <TouchableOpacity {...props}> */}
-                            <TouchableOpacity onPress={onPress}>
+                            <TouchableOpacity {...props}>
+                            {/* <TouchableOpacity onPress={onPress}> */}
                                 <Icon 
                                     name={iconName}
                                     type='ionicon'
