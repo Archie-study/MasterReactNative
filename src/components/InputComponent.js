@@ -9,7 +9,9 @@ import {
 import { Icon } from 'react-native-elements';
 
 export const Input = (props) => {
-    const { title, isPassword, iconName } = props;
+    // const { title, isPassword, iconName } = props;
+    const { title, isPassword, iconName, onChangeText, onPress, value, placeholder, secureTextEntry } = props;
+
 
     return (
 
@@ -18,14 +20,22 @@ export const Input = (props) => {
                 <Text>{title}</Text>
             </View>
             <View style={styles.inputContainer}>
-                <TextInput 
+                {/* <TextInput 
                     style={styles.input}
                     {...props}
+                /> */}
+                <TextInput 
+                    style={styles.input}
+                    onChangeText={onChangeText} // Pastikan fungsi perubahan teks diteruskan
+                    value={value} // Pastikan value diteruskan
+                    placeholder={placeholder} // Placeholder diteruskan
+                    secureTextEntry={secureTextEntry} // Untuk input password
                 />
                 {
                     isPassword ? 
                         <View style={styles.iconContainer}>
-                            <TouchableOpacity {...props}>
+                            {/* <TouchableOpacity {...props}> */}
+                            <TouchableOpacity onPress={onPress}>
                                 <Icon 
                                     name={iconName}
                                     type='ionicon'
